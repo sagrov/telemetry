@@ -1,0 +1,38 @@
+{
+  "drone_id": "C128_03",
+  "flight_id": "odesa_test_30pts_2025_12_12",
+  "telemetry": [
+    {"ts":"2025-12-12T06:40:00Z","lat":46.48270,"lon":30.72330,"altitude":95.0,"speed":12.5,"battery":97.0,"wind_speed":5.0,"wind_dir_deg":20.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":46.0}},
+    {"ts":"2025-12-12T06:40:06Z","lat":46.48278,"lon":30.72344,"altitude":95.4,"speed":12.6,"battery":96.7,"wind_speed":5.2,"wind_dir_deg":25.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":46.2}},
+    {"ts":"2025-12-12T06:40:12Z","lat":46.48286,"lon":30.72358,"altitude":95.8,"speed":12.4,"battery":96.4,"wind_speed":5.1,"wind_dir_deg":25.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":46.4}},
+    {"ts":"2025-12-12T06:40:18Z","lat":46.48294,"lon":30.72372,"altitude":96.0,"speed":12.3,"battery":96.1,"wind_speed":5.3,"wind_dir_deg":30.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":46.6}},
+    {"ts":"2025-12-12T06:40:24Z","lat":46.48302,"lon":30.72386,"altitude":96.2,"speed":12.2,"battery":95.8,"wind_speed":5.4,"wind_dir_deg":30.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":46.8}},
+    {"ts":"2025-12-12T06:40:30Z","lat":46.48310,"lon":30.72400,"altitude":96.4,"speed":12.1,"battery":95.5,"wind_speed":5.6,"wind_dir_deg":35.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":47.0}},
+    {"ts":"2025-12-12T06:40:36Z","lat":46.48318,"lon":30.72414,"altitude":96.6,"speed":12.0,"battery":95.2,"wind_speed":5.5,"wind_dir_deg":35.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":47.2}},
+    {"ts":"2025-12-12T06:40:42Z","lat":46.48326,"lon":30.72428,"altitude":96.7,"speed":11.9,"battery":94.9,"wind_speed":5.7,"wind_dir_deg":40.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":47.4}},
+    {"ts":"2025-12-12T06:40:48Z","lat":46.48334,"lon":30.72442,"altitude":96.6,"speed":12.0,"battery":94.6,"wind_speed":5.8,"wind_dir_deg":40.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":47.6}},
+    {"ts":"2025-12-12T06:40:54Z","lat":46.48342,"lon":30.72456,"altitude":96.4,"speed":12.2,"battery":94.3,"wind_speed":5.9,"wind_dir_deg":45.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":47.8}},
+
+    {"ts":"2025-12-12T06:41:00Z","lat":46.48350,"lon":30.72470,"altitude":96.2,"speed":12.4,"battery":94.0,"wind_speed":6.0,"wind_dir_deg":45.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":48.0}},
+    {"ts":"2025-12-12T06:41:06Z","lat":46.48360,"lon":30.72482,"altitude":96.1,"speed":12.6,"battery":93.6,"wind_speed":6.2,"wind_dir_deg":50.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":48.2}},
+    {"ts":"2025-12-12T06:41:12Z","lat":46.48370,"lon":30.72494,"altitude":96.0,"speed":12.7,"battery":93.2,"wind_speed":6.3,"wind_dir_deg":50.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":48.4}},
+    {"ts":"2025-12-12T06:41:18Z","lat":46.48380,"lon":30.72506,"altitude":96.0,"speed":12.5,"battery":92.9,"wind_speed":6.4,"wind_dir_deg":55.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":48.6}},
+    {"ts":"2025-12-12T06:41:24Z","lat":46.48390,"lon":30.72518,"altitude":96.1,"speed":12.3,"battery":92.6,"wind_speed":6.5,"wind_dir_deg":55.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":48.8}},
+    {"ts":"2025-12-12T06:41:30Z","lat":46.48400,"lon":30.72530,"altitude":96.3,"speed":12.1,"battery":92.3,"wind_speed":6.3,"wind_dir_deg":60.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":49.0}},
+    {"ts":"2025-12-12T06:41:36Z","lat":46.48410,"lon":30.72542,"altitude":96.6,"speed":12.0,"battery":92.0,"wind_speed":6.2,"wind_dir_deg":60.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":49.2}},
+    {"ts":"2025-12-12T06:41:42Z","lat":46.48420,"lon":30.72554,"altitude":96.9,"speed":11.8,"battery":91.6,"wind_speed":6.1,"wind_dir_deg":65.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":49.4}},
+    {"ts":"2025-12-12T06:41:48Z","lat":46.48430,"lon":30.72566,"altitude":97.1,"speed":11.7,"battery":91.3,"wind_speed":6.0,"wind_dir_deg":65.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":49.6}},
+    {"ts":"2025-12-12T06:41:54Z","lat":46.48440,"lon":30.72578,"altitude":97.0,"speed":11.9,"battery":91.0,"wind_speed":5.9,"wind_dir_deg":70.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":49.8}},
+
+    {"ts":"2025-12-12T06:42:00Z","lat":46.48450,"lon":30.72590,"altitude":96.8,"speed":12.1,"battery":90.7,"wind_speed":5.8,"wind_dir_deg":70.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":50.0}},
+    {"ts":"2025-12-12T06:42:06Z","lat":46.48460,"lon":30.72602,"altitude":96.6,"speed":12.2,"battery":90.4,"wind_speed":5.7,"wind_dir_deg":72.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":50.2}},
+    {"ts":"2025-12-12T06:42:12Z","lat":46.48470,"lon":30.72614,"altitude":96.5,"speed":12.0,"battery":90.0,"wind_speed":5.6,"wind_dir_deg":75.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":50.4}},
+    {"ts":"2025-12-12T06:42:18Z","lat":46.48478,"lon":30.72628,"altitude":96.5,"speed":11.8,"battery":89.7,"wind_speed":5.7,"wind_dir_deg":75.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":50.6}},
+    {"ts":"2025-12-12T06:42:24Z","lat":46.48486,"lon":30.72642,"altitude":96.6,"speed":11.7,"battery":89.4,"wind_speed":5.8,"wind_dir_deg":78.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":50.8}},
+    {"ts":"2025-12-12T06:42:30Z","lat":46.48494,"lon":30.72656,"altitude":96.8,"speed":11.6,"battery":89.1,"wind_speed":5.9,"wind_dir_deg":80.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":51.0}},
+    {"ts":"2025-12-12T06:42:36Z","lat":46.48502,"lon":30.72670,"altitude":97.0,"speed":11.8,"battery":88.7,"wind_speed":6.0,"wind_dir_deg":82.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":51.2}},
+    {"ts":"2025-12-12T06:42:42Z","lat":46.48510,"lon":30.72684,"altitude":97.1,"speed":12.0,"battery":88.4,"wind_speed":6.1,"wind_dir_deg":85.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":51.4}},
+    {"ts":"2025-12-12T06:42:48Z","lat":46.48518,"lon":30.72698,"altitude":97.0,"speed":12.2,"battery":88.1,"wind_speed":6.2,"wind_dir_deg":88.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":51.6}},
+    {"ts":"2025-12-12T06:42:54Z","lat":46.48526,"lon":30.72712,"altitude":96.8,"speed":12.3,"battery":87.8,"wind_speed":6.3,"wind_dir_deg":90.0,"aggregates":{"motors_ok":true,"gps_ok":true,"imu_ok":true,"comm_ok":true,"temp_c":51.8}}
+  ]
+}

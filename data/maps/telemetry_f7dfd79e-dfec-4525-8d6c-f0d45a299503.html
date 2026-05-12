@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Telemetry Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    html, body, #map { height: 100%; margin: 0; }
+    .hud{
+      position:absolute; z-index:9999; top:10px; left:10px;
+      background:rgba(255,255,255,0.92); padding:10px 12px;
+      border-radius:10px; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      font-size:14px; max-width:460px;
+    }
+    .hud b{font-weight:650;}
+  </style>
+</head>
+<body>
+<div class="hud" id="hud"></div>
+<div id="map"></div>
+
+<script>
+const cfg = {"center": {"lat": 50.4502, "lon": 30.5233, "zoom": 13}, "meta": {"drone_id": "C128_01", "flight_id": "kyiv_spread_15pts_2025_12_10", "points_count": 15, "start_ts": "2025-12-10T09:12:00Z", "end_ts": "2025-12-10T09:27:40Z"}, "points": [{"lat": 50.4502, "lon": 30.5233, "ts": "2025-12-10T09:12:00Z", "altitude": 120.0, "speed": 10.4, "battery": 92.0, "wind_speed": 4.2, "wind_dir_deg": 300.0}, {"lat": 50.45185, "lon": 30.5251, "ts": "2025-12-10T09:13:00Z", "altitude": 121.0, "speed": 10.9, "battery": 91.1, "wind_speed": 4.6, "wind_dir_deg": 305.0}, {"lat": 50.4534, "lon": 30.5276, "ts": "2025-12-10T09:14:10Z", "altitude": 122.2, "speed": 11.2, "battery": 90.1, "wind_speed": 5.1, "wind_dir_deg": 310.0}, {"lat": 50.4541, "lon": 30.5314, "ts": "2025-12-10T09:15:20Z", "altitude": 123.0, "speed": 11.0, "battery": 89.0, "wind_speed": 5.4, "wind_dir_deg": 312.0}, {"lat": 50.4533, "lon": 30.5358, "ts": "2025-12-10T09:16:10Z", "altitude": 123.6, "speed": 10.6, "battery": 88.0, "wind_speed": 5.6, "wind_dir_deg": 315.0}, {"lat": 50.4519, "lon": 30.5396, "ts": "2025-12-10T09:17:20Z", "altitude": 124.0, "speed": 10.2, "battery": 87.0, "wind_speed": 5.8, "wind_dir_deg": 320.0}, {"lat": 50.4501, "lon": 30.5432, "ts": "2025-12-10T09:18:30Z", "altitude": 124.2, "speed": 10.0, "battery": 85.8, "wind_speed": 6.1, "wind_dir_deg": 322.0}, {"lat": 50.4479, "lon": 30.5454, "ts": "2025-12-10T09:19:30Z", "altitude": 123.8, "speed": 9.6, "battery": 84.8, "wind_speed": 6.4, "wind_dir_deg": 325.0}, {"lat": 50.4455, "lon": 30.5461, "ts": "2025-12-10T09:20:40Z", "altitude": 123.0, "speed": 9.4, "battery": 83.7, "wind_speed": 6.6, "wind_dir_deg": 330.0}, {"lat": 50.4433, "lon": 30.5448, "ts": "2025-12-10T09:21:50Z", "altitude": 122.4, "speed": 9.8, "battery": 82.6, "wind_speed": 6.2, "wind_dir_deg": 335.0}, {"lat": 50.4416, "lon": 30.5418, "ts": "2025-12-10T09:23:00Z", "altitude": 122.0, "speed": 10.3, "battery": 81.5, "wind_speed": 5.8, "wind_dir_deg": 340.0}, {"lat": 50.4407, "lon": 30.5377, "ts": "2025-12-10T09:24:10Z", "altitude": 121.6, "speed": 10.7, "battery": 80.3, "wind_speed": 5.5, "wind_dir_deg": 345.0}, {"lat": 50.4412, "lon": 30.5336, "ts": "2025-12-10T09:25:20Z", "altitude": 121.2, "speed": 11.0, "battery": 79.2, "wind_speed": 5.2, "wind_dir_deg": 350.0}, {"lat": 50.443, "lon": 30.5304, "ts": "2025-12-10T09:26:30Z", "altitude": 120.8, "speed": 10.6, "battery": 78.1, "wind_speed": 4.8, "wind_dir_deg": 355.0}, {"lat": 50.4454, "lon": 30.5286, "ts": "2025-12-10T09:27:40Z", "altitude": 120.2, "speed": 10.1, "battery": 77.0, "wind_speed": 4.5, "wind_dir_deg": 2.0}]};
+
+const map = L.map('map').setView([cfg.center.lat, cfg.center.lon], cfg.center.zoom);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19, attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+function setHud(html){ document.getElementById("hud").innerHTML = html; }
+
+setHud(
+  "<b>Telemetry</b><br/>" +
+  "Drone: " + (cfg.meta.drone_id || "-") + "<br/>" +
+  "Flight: " + (cfg.meta.flight_id || "-") + "<br/>" +
+  "Points: " + cfg.meta.points_count + "<br/>" +
+  (cfg.meta.start_ts ? ("Start: " + cfg.meta.start_ts + "<br/>") : "") +
+  (cfg.meta.end_ts ? ("End: " + cfg.meta.end_ts + "<br/>") : "")
+);
+
+if(cfg.points.length > 0){
+  const latlngs = cfg.points.map(p => [p.lat, p.lon]);
+  const poly = L.polyline(latlngs).addTo(map);
+  map.fitBounds(poly.getBounds(), {padding:[20,20]});
+
+  cfg.points.forEach((p, idx) => {
+    const m = L.circleMarker([p.lat, p.lon], {radius: 5}).addTo(map);
+    const rows = [];
+    rows.push("<b>Point #" + (idx+1) + "</b>");
+    if(p.ts) rows.push("ts: " + p.ts);
+    if(p.altitude !== undefined) rows.push("alt: " + p.altitude);
+    if(p.speed !== undefined) rows.push("speed: " + p.speed);
+    if(p.battery !== undefined) rows.push("battery: " + p.battery);
+    if(p.wind_speed !== undefined) rows.push("wind_speed: " + p.wind_speed);
+    if(p.wind_dir_deg !== undefined) rows.push("wind_dir(FROM): " + p.wind_dir_deg);
+    m.bindPopup(rows.join("<br/>"));
+  });
+
+  // start/end markers
+  const s = cfg.points[0];
+  const e = cfg.points[cfg.points.length-1];
+  L.marker([s.lat, s.lon]).addTo(map).bindPopup("Start").openPopup();
+  L.marker([e.lat, e.lon]).addTo(map).bindPopup("End");
+}
+</script>
+</body>
+</html>
